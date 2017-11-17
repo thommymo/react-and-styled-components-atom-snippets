@@ -15,7 +15,7 @@ Development
 
 ```sh
 $ cd ~/.atom/packages
-$ git clone https://github.com/webbushka/atom-react-snippets.git
+$ git clone https://github.com/thommymo/react-and-styled-components-atom-snippets
 $ cd atom-react-snippets
 $ apm install
 $ apm link
