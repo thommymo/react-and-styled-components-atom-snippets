@@ -1,0 +1,19 @@
+{
+  "name": "react-styled-components-snippets",
+  "version": "0.0.1",
+  "description": "Atom Snippets for React and Styled Components",
+  "main": "./lib/react-styled-components-snippets",
+  "keywords": [
+    "react",
+    "snippets",
+    "es6"
+  ],
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "localhost"
+  },
+  "homepage": "localhost"
+}

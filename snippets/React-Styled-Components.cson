@@ -1,0 +1,129 @@
+".source.js, .source.jsx, .source.ts, .source.tsx":
+
+  # GENERAL
+
+  "React: import empty":
+    prefix: "im"
+    body: "import ${1} from '${2}'"
+
+  "React: export empty":
+    prefix: "ex"
+    body: "export ${1}"
+
+  "React: export default empty":
+    prefix: "exd"
+    body: "export default ${1}"
+
+  "React: stateless function":
+    prefix: "sf"
+    body: "const ${1} = ({${2}}) => (\n\t${3}\n)"
+
+  # REACT
+
+  "React: import react":
+    prefix: "ri"
+    body: "import React from 'react'"
+
+  "React: import react with Component":
+    prefix: "ric"
+    body: "import React, { Component } from 'react'"
+
+  "React: import react with PureComponent":
+    prefix: "ripc"
+    body: "import React, { PureComponent } from 'react'"
+
+  "React: import react with PropTypes":
+    prefix: "rip"
+    body: "import React from 'react'\nimport PropTypes from 'prop-types'"
+
+  "React: import react with Component and PropTypes":
+    prefix: "ricp"
+    body: "import React, { Component } from 'react'\nimport PropTypes from 'prop-types'"
+
+  # REACT LIFECYCLE FUNCTIONS
+
+  "React: componentDidMount() { ... }":
+    prefix: "rcdm"
+    body: "componentDidMount() {\n\t${1}\n}${2}"
+
+  "React: componentWillMount() { ... }":
+    prefix: "rcwm"
+    body: "componentWillMount() {\n\t${1}\n}${2}"
+
+  "React: componentWillReceiveProps(np) { ... }":
+    prefix: "rcwr"
+    body: "componentWillReceiveProps(nextProps) {\n\t${1}\n}${2}"
+
+  "React: shouldComponentUpdate(np, ns) { ... }":
+    prefix: "rscu"
+    body: "shouldComponentUpdate(nextProps, nextState) {\n\t${1}\n}${2}"
+
+  "React: componentWillUpdate(np, ns) { ... }":
+    prefix: "rcwup"
+    body: "componentWillUpdate(nextProps, nextState) {\n\t${1}\n}${2}"
+
+  "React: componentDidUpdate(pp, ps) { ... }":
+    prefix: "rcdup"
+    body: "componentDidUpdate(prevProps, prevState) {\n\t${1}\n}${2}"
+
+  "React: componentWillUnmount() { ... }":
+    prefix: "rcwun"
+    body: "componentWillUnmount() {\n\t${1}\n}${2}"
+
+  "React: componentDidCatch(error, info) { ... }":
+    prefix: "rcdc"
+    body: "componentDidCatch(error, info) {\n\t${1}\n}${2}"
+
+  # REACT SKELETONS
+
+  "React: class skeleton":
+    prefix: "rcs"
+    body: "import React, { Component } from 'react'\n\nclass ${1} extends Component {\n\n\trender() {\n\t\treturn (\n\t\t\t${2:<div></div>}\n\t\t)\n\t}\n\n}\n\nexport default ${1}"
+
+  "React: stateless component":
+    prefix: "rsc"
+    body: "import React from 'react'\n\nconst ${1} = ({${2}}) => (\n\t<div>${4}</div>\n)\n\nexport default ${1}"
+
+  "React: stateless component with PropTypes":
+    prefix: "rscp"
+    body: "import React from 'react'\nimport PropTypes from 'prop-types'\n\nconst ${1} = ({${2}}) => (\n\t<div>${4}</div>\n)\n\n${1}.propTypes = {\n\t${2}: PropTypes.${3}\n}\n\nexport default ${1}"
+
+  "React: stateless component with return":
+    prefix: "rscpr"
+    body: "import React from 'react'\nimport PropTypes from 'prop-types'\n\nconst ${1} = ({${2}}) => {\n\treturn (\n\t\t<div>${4}</div>\n\t)\n}\n\n${1}.propTypes = {\n\t${2}: PropTypes.${3}\n}\n\nexport default ${1}"
+
+  # REACT UTILS
+
+  "React: setState({ ... })":
+    prefix: "rss"
+    body: "this.setState({\n\t${1}: ${2}\n})"
+
+  "React: this.props.":
+    prefix: "rtp"
+    body: "this.props.${1}"
+
+  "React: this.state.":
+    prefix: "rts"
+    body: "this.state.${1}"
+
+  # STYLED COMPONENTS
+
+  "Styled Components: import":
+    prefix: "sci"
+    body: "import styled from 'styled-components'"
+
+  "Styled Components: import with React":
+    prefix: "scir"
+    body: "import React from 'react'\nimport styled from 'styled-components'"
+
+  "Styled Components: Props":
+    prefix: "scp"
+    body: "${props => props.${1}}"
+
+  "Styled Components: styled":
+    prefix: "scs"
+    body: "const ${1} = styled.${2}`\n\t${3}\n`"
+
+  "Styled Components: extend":
+    prefix: "scx"
+    body: "const ${1} = ${2}.extend`\n\t${3}\n`"
